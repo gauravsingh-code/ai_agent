@@ -11,6 +11,8 @@ class RAGPipeline:
         self.llm = llm
         self.embedding_model = EmbeddingModel()
         self.vector_store = VectorStore()
+        self.chunks = []
+        self.embeddings = None
 
     def ingest_pdf(self, file_path: str):
 
@@ -19,6 +21,8 @@ class RAGPipeline:
         chunks = chunk_text(text)
 
         embeddings = self.embedding_model.embed(chunks)
+        self.chunks = chunks
+        self.embeddings = embeddings
 
         ids = [
             f"chunk-{i}"
