@@ -1,0 +1,26 @@
+.\venv\Scripts\Activate.ps1  -> Powershell
+venv\Scripts\activate  -> Command Prompt      
+
+                ┌──────────────┐
+                │ PDF / Docs   │
+                └──────┬───────┘
+                       ↓
+                   Extraction
+                       ↓
+                    Chunking
+                       ↓
+                   Embedding
+                       ↓
+                  Vector Store
+                       ↓
+                    Retrieval
+                       ↓
+                    Reranking
+                       ↓
+                  Context Filter
+                       ↓
+                     Gemini
+                       ↓
+                  Grounded Answer
+                       ↓
+                  Source Citations
